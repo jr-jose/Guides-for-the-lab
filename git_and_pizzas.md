@@ -1,7 +1,6 @@
-# Another *Git* and *Github* pizzas guide (very brief).
+# Another *Git* and *Github* pizzas guide.
 
-Using Git and Github is like making and delivering pizzas. Are you hungry?!??
-
+Using Git and Github is like making and delivering pizzas. Are you hungry?!??  
 (well, it's not like delivering pizzas but their recipes. Let's explain it ...)
 
 
@@ -26,16 +25,15 @@ Using Git and Github is like making and delivering pizzas. Are you hungry?!??
 
 * Your code/script is a recipe to make one of your usual/favorite pizzas. 
 * Every recipe has a name (script name) and a creator (you?).
-* 
+  
 * Every recipe can be updated/improved; a ***commit*** is an update (remind it).
 * Every *commit* has an identifier to document and trace the modifications.
-* 
+  
 * Recipes can fork in a main branch (***master***) and secondary ones.
 * Git allows an easy way to trace these forks ... and to join branches later on.
-* 
+  
 * Your recipe versions are then easily traceable, and available from everywhere!
 * Git is the versions control system most used worldwide, and it's for free.
-
 
 Note I: a versions control system is a program allowing you to control 
 developmental code/recipes changes, who changed it, when was do it, etc., 
@@ -78,32 +76,25 @@ Instructions:
 4. `ssh-keygen -t rsa -C "your_email_address@crg.eu"`
 5. `cat id_rsa.pub`
 
-Copy the obtained code (it allow to connect to *github* from this specific PC).
- 
-Log in *github.com* with your previous credentials (https://github.com/login).
-
-Go to the SSH keys section of your settings (https://github.com/settings/keys).
-
-Add the copied code as *"New SSH key"* (please, use a descriptive title).
-
-Launch `ssh -T git@github.com` in the terminal to check you can connect to it.
-
+Copy the obtained code (it allow to connect to *github* from this specific PC).  
+Log in *github.com* with your previous credentials (https://github.com/login).  
+Go to the SSH keys section of your settings (https://github.com/settings/keys).  
+Add the copied code as *"New SSH key"* (please, use a descriptive title).  
+Launch `ssh -T git@github.com` in the terminal to check you can connect to it.  
 Done!
 
 
 ### Basic workflow (actions).
 
-It's mandatory: every project should be a differentiated folder/directory.
+Every project should be a differentiated folder/directory (it's mandatory!).
 
 1. Create the working/project directory with `init` (just once, not every time).
 2. Save recipe changes with `add` (when you want, but try to do it often!).
 3. Added changes are traced by using `commit` command (try to explain them!).
-
-
+  
 4. Share traceable recipes with `push` (recipe available everywhere via Github).
 5. Download the available recipe version with `pull` (obtained from Github).
-
-
+  
 6. If you need *help* for a command, please use it (e.g.: `git help pull`).
 
 ##### Summary (to *move* things from one side to another):
@@ -116,7 +107,9 @@ There are three steps to arrive to the *summit*:
 
 Available commands:
 
+| ------------- | --------------- | ------------------ | -------------------- |
 | Kitchen bench | Recipes drawer  | Your recipes book  | *wwa* recipes book   |
+| ------------- | --------------- | ------------------ | -------------------- |
 | (workspace)   | (staging)       | (local repository) | (public repository)  |
 | ------------- | --------------- | ------------------ | -------------------- |
 | git init      |                 |                    |                      |
@@ -144,8 +137,7 @@ Available commands:
 * Describe changes with a double `git commit -m "update name" -m "description"`.
 * Save directly in local collections with `git commit -a` (no *git add* needed).
 * Then, the `git log` command shows all traced changes in your local collection.
-
-
+  
 * The file *.gitignore* allows to specify always omitted files (e.g.: *\*.log*).
 * A `git checkout -- file_name` eliminates bench changes (use very carefully!).
 
@@ -181,23 +173,15 @@ Execute them and try to understand every single command and supplied argument.
 17. `echo "I continue adding sentences to carry out tests." >> readme.md`
 18. **`git commit -a -m "Continuation" -m "This is the second commit."`**
 
-After step 04, the folder will always be under *Git* control (do it just once!).
-
-After step 07, you had two files on your kitchen bench (see steps 08 and 09).
-
-After step 10, these two files were waiting inside the recipes drawer (staging).
-
-After step 12, you modified one of the files (see step 13).
-
-After step 14, you saved the modification being present in the drawer/stage.
-
-After step 15, everything was saved (and traceable!) in your local recipes book.
-
-- this task should be done when a specific objective was reached to trace it -
-
-After step 18, a new change was added to the book without being in the drawer.
-
-- the *commit -a* option allows simultaneous stage and local book savings - 
+After step 04, the folder will always be under *Git* control (do it just once!).  
+After step 07, you had two files on your kitchen bench (see steps 08 and 09).  
+After step 10, these two files were waiting inside the recipes drawer (staging).  
+After step 12, you modified one of the files (see step 13).  
+After step 14, you saved the modification being present in the drawer/stage.  
+After step 15, everything was saved (and traceable!) in your local recipes book.  
+\- this task should be done when a specific objective was reached to trace it -  
+After step 18, a new change was added to the book without being in the drawer.  
+\- the *commit -a* option allows simultaneous stage and local book savings - 
 
 ##### Going further ('undoing'):
 
@@ -215,10 +199,8 @@ After step 18, a new change was added to the book without being in the drawer.
 30. **`git log`**
 31. **`git log --oneline --graph --decorate --color`**
 
-After step 21, changes in the bench (not added to stage/drawer) were discarded.
-
-After step 26, changes were eliminated from the stage/drawer but bench kept.
-
+After step 21, changes in the bench (not added to stage/drawer) were discarded.  
+After step 26, changes were eliminated from the stage/drawer but bench kept.  
 After step 28, changes were also eliminated from the bench.
 
 ##### Available everywhere ('uploading'):
@@ -227,21 +209,14 @@ After step 28, changes were also eliminated from the bench.
 33. **`git remote -v`**
 34. **`git push -u origin master`**
 
-After step 32, this local respository is linked with the new one on *Github*.
-
-- you need to create the repository in the website too: https://github.com/new -
-
-- please, create it but without adding any file (we will use the command line) -
-
-After step 34, files/changes were send to the worldwide accessible repository.
-
-- if you do not create the repository in the website, the *push* won't work -
-
-- the *-u* option is necesary only the first time, but not for next updates -
-
-- see your repository worlwide by visiting https://github.com/your_user/hello -
-
-- you are also encouraged to makes changes on the website (e.g.: add a line) -
+After step 32, this local respository is linked with the new one on *Github*.  
+\- you need to create the repository in the website too: https://github.com/new -  
+\- please, create it but without adding any file (we will use the command line) -  
+After step 34, files/changes were send to the worldwide accessible repository.  
+\- if you do not create the repository in the website, the *push* won't work -  
+\- the *-u* option is necesary only the first time, but not for next updates -  
+\- see your repository worlwide by visiting https://github.com/your_user/hello -  
+\- you are also encouraged to makes changes on the website (e.g.: add a line) -
 
 ##### Usual workflow ('renewing'):
 
@@ -251,12 +226,9 @@ After step 34, files/changes were send to the worldwide accessible repository.
 38. **`git commit -a -m "Last line" -m "This commit modifies the last line."`**
 39. **`git push -u origin master`**
 
-After step 35, *Github* changes were also downloaded to your local repository.
-
-- launching this command is very recommended before starting any work -
-
-After step 38, changes were saved in the recipes drawer (stage) and local book.
-
+After step 35, *Github* changes were also downloaded to your local repository.  
+\- launching this command is very recommended before starting any work -  
+After step 38, changes were saved in the recipes drawer (stage) and local book.  
 After step 39, the modifications were also saved remotely (github repository). 
 
 ##### Contributing to someone else project ('branching'):
@@ -277,8 +249,7 @@ After step 40, it's now you who should know and explore what to do ... :)
 
 ------------
 
-Contact me at any moment if you have any problem or suggestion about all this.
-
+Contact me at any moment if you have any problem or suggestion about all this.  
 Thanks!
 
 
