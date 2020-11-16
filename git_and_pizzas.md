@@ -1,4 +1,4 @@
-# Git/Github pizza recipes guide (very brief).
+# Another *Git* and *Github* pizzas guide (very brief).
 
 Using Git and Github is like making and delivering pizzas. Are you hungry?!??
 
@@ -9,8 +9,8 @@ Using Git and Github is like making and delivering pizzas. Are you hungry?!??
 
 + [Basic ideas.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#basic-ideas-specific-language)
 + [What do you need?](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#what-do-you-need-in-your-gitgithub-kitchen)
-    * [Minimal *Git* configuration.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#minimal-configuration-for-git-after-installation)
-    * [Minimal *Github* configuration.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#minimal-configuration-to-connect-to-github)
+    * [Minimal *Git* conf..](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#minimal-configuration-for-git-after-installation)
+    * [Minimal *Github* conf..](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#minimal-configuration-to-connect-to-github)
 + [Basic workflow.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#basic-workflow-actions)
     * [Summary.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#summary-to-move-things-from-one-side-to-another)
     * [Tricks.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#tricks-to-keep-in-mind)
@@ -26,16 +26,13 @@ Using Git and Github is like making and delivering pizzas. Are you hungry?!??
 
 * Your code/script is a recipe to make one of your usual/favorite pizzas. 
 * Every recipe has a name (script name) and a creator (you?).
-
-
+* 
 * Every recipe can be updated/improved; a ***commit*** is an update (remind it).
 * Every *commit* has an identifier to document and trace the modifications.
-
-
+* 
 * Recipes can fork in a main branch (***master***) and secondary ones.
 * Git allows an easy way to trace these forks ... and to join branches later on.
-
-
+* 
 * Your recipe versions are then easily traceable, and available from everywhere!
 * Git is the versions control system most used worldwide, and it's for free.
 
