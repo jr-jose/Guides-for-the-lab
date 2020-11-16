@@ -23,17 +23,17 @@ Using Git and Github is like making and delivering pizzas. Are you hungry?!??
 
 ### Basic ideas (specific language).
 
-* Your code/script is a recipe to make one of your usual/favorite pizzas. 
-* Every recipe has a name (script name) and a creator (you?).
-  
-* Every recipe can be updated/improved; a ***commit*** is an update (remind it).
-* Every *commit* has an identifier to document and trace the modifications.
-  
-* Recipes can fork in a main branch (***master***) and secondary ones.
-* Git allows an easy way to trace these forks ... and to join branches later on.
-  
-* Your recipe versions are then easily traceable, and available from everywhere!
-* Git is the versions control system most used worldwide, and it's for free.
+Your code/script is a recipe to make one of your usual/favorite pizzas.  
+Every recipe has a name (script name) and a creator (you?).
+
+Every recipe can be updated/improved; a ***commit*** is an update (remind it).  
+Every *commit* has an identifier to document and trace the modifications.
+
+Recipes can fork in a main branch (***master***) and secondary ones.  
+Git allows an easy way to trace these forks ... and to join branches later on.
+
+Your recipe versions are then easily traceable, and available from everywhere!  
+Git is the versions control system most used worldwide, and it's for free.
 
 Note I: a versions control system is a program allowing you to control 
 developmental code/recipes changes, who changed it, when was do it, etc., 
@@ -46,25 +46,23 @@ Note II: recipe forks allow multiple people working in the same project in paral
 
 ### What do you need in your Git/Github kitchen? 
 
-* A currently activated **Github** account: https://github.com/join .
-* The **Git** software installed in your PC. .
+A currently activated **Github** account: https://github.com/join .  
+The **Git** software installed in your PC. .
 
 Installation:
 
-CentOs7 (in the terminal): `sudo yum install git`.
-
-Windows: download (https://git-scm.com/downloads) and execute it.
+* CentOs7 (in the terminal): `sudo yum install git`.
+* Windows: download (https://git-scm.com/downloads) and execute it.
 
 Now, you are ready to use *git* commands! 
 
 ##### Minimal configuration for *Git* (after installation):
 (use the terminal in Linux and the *Git Bash* software in Windows)
 
-* Launch `git config --global user.name "Your name here"` command.
-* Then, launch `git config --global user.email "your_email@here.com"`.
+Launch `git config --global user.name "Your name here"` command.  
+Then, launch `git config --global user.email "your_email@here.com"`.
 
-
-* Your configuration can be checked with `git config --global --list`.
+Your configuration can be checked with `git config --global --list`.
 
 ##### Minimal configuration to connect to *Github*:
 
@@ -107,11 +105,10 @@ There are three steps to arrive to the *summit*:
 
 Available commands:
 
-| ------------- | --------------- | ------------------ | -------------------- |
 | Kitchen bench | Recipes drawer  | Your recipes book  | *wwa* recipes book   |
 | ------------- | --------------- | ------------------ | -------------------- |
 | (workspace)   | (staging)       | (local repository) | (public repository)  |
-| ------------- | --------------- | ------------------ | -------------------- |
+|               |                 |                    |                      |
 | git init      |                 |                    |                      |
 | git status    |                 |                    |                      |
 | git add ..... | .......>        |                    |                      |
@@ -130,27 +127,27 @@ Available commands:
 
 ##### Tricks (to keep in mind):
 
-* Use `git init` to work with current folder (you need to be inside the folder).
-* Use `git init new_project_name` to create a new folder to work with.
-* Use `git add file_name` to add a whole file to the project.
-* Use `git add .` to add all files (and potential changes) recursively.
-* Describe changes with a double `git commit -m "update name" -m "description"`.
-* Save directly in local collections with `git commit -a` (no *git add* needed).
-* Then, the `git log` command shows all traced changes in your local collection.
-  
-* The file *.gitignore* allows to specify always omitted files (e.g.: *\*.log*).
-* A `git checkout -- file_name` eliminates bench changes (use very carefully!).
+Use `git init` to work with current folder (you need to be inside the folder).  
+Use `git init new_project_name` to create a new folder to work with.  
+Use `git add file_name` to add a whole file to the project.  
+Use `git add .` to add all files (and potential changes) recursively.  
+Describe changes with a double `git commit -m "update name" -m "description"`.  
+Save directly in local collections with `git commit -a` (no *git add* needed).  
+Then, the `git log` command shows all traced changes in your local collection.
+
+The file *.gitignore* allows to specify always omitted files (e.g.: *\*.log*).  
+A `git checkout -- file_name` eliminates bench changes (use very carefully!).
 
 
 ### Homework (first project after installing and configuring *Git*).
 
-List of commands initializing your first project to start playing with *Git*.
+List of commands initializing your first project to start playing with *Git*.  
 Execute them and try to understand every single command and supplied argument.
 
-* git commands are written in bold characters.
-* use `cat file_name` command to see inside files (at any moment).
-* use *git help git_command* to get specific help from a *git* command.
-* and, finally, remember that ***git status*** is a very good friend too!
+Note I: git commands are written in bold characters.
+Note II: use `cat file_name` command to see inside files (at any moment).
+Note III: use *git help git_command* to get specific help from a *git* command.
+Note IV: and, finally, remember that ***git status*** is a very good friend too!
 
 ##### First steps ('doing'):
 
@@ -181,11 +178,11 @@ After step 14, you saved the modification being present in the drawer/stage.
 After step 15, everything was saved (and traceable!) in your local recipes book.  
 \- this task should be done when a specific objective was reached to trace it -  
 After step 18, a new change was added to the book without being in the drawer.  
-\- the *commit -a* option allows simultaneous stage and local book savings - 
+\- the `git commit -a` option allows simultaneous stage and local book savings - 
 
 ##### Going further ('undoing'):
 
-19. `echo "This line will be eliminated with 'checkout'." >> readme.md
+19. `echo "This line will be eliminated with 'checkout'." >> readme.md`
 20. **`git status`**
 21. **`git checkout -- readme.md`**
 22. **`git status`**
@@ -211,7 +208,8 @@ After step 28, changes were also eliminated from the bench.
 
 After step 32, this local respository is linked with the new one on *Github*.  
 \- you need to create the repository in the website too: https://github.com/new -  
-\- please, create it but without adding any file (we will use the command line) -  
+\- please, create it but without adding any file (we will use the command line) -
+
 After step 34, files/changes were send to the worldwide accessible repository.  
 \- if you do not create the repository in the website, the *push* won't work -  
 \- the *-u* option is necesary only the first time, but not for next updates -  
