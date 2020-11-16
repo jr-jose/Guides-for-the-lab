@@ -7,21 +7,20 @@ Using Git and Github is like making and delivering pizzas. Are you hungry?!??
 
 ### Table of contents.
 
-+ [Basic ideas.](#basic-ideas--specific-language-)
-+ [What do you need?](#what-do-you-need-in-your-git-github-kitchen-)
-    * [Minimal *Git* configuration.](#minimal-configuration-for--git---after-installation--)
-    * [Minimal *Github* configuration.](#minimal-configuration-to-connect-to--github--)
-+ [Basic workflow.](#basic-workflow--actions-)
-    * [Summary.](#summary--to--move--things-from-one-side-to-another--)
-    * [Tricks.](#tricks--to-keep-in-mind--)
-+ [Homework.](#homework--first-project-after-installing-and-configuring--git--)
-    * ['Doing'.](#first-steps---doing---)
-    * ['Undoing'.](#going-further---undoing---)
-    * ['Uploading'.](#available-everywhere---uploading---)
-    * ['Renewing'.](#usual-workflow---renewing---)
-    * ['Branching'.](#contributing-to-someone-else-project--branching--)
++ [Basic ideas.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#basic-ideas-specific-language)
++ [What do you need?](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#what-do-you-need-in-your-gitgithub-kitchen)
+    * [Minimal *Git* configuration.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#minimal-configuration-for-git-after-installation)
+    * [Minimal *Github* configuration.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#minimal-configuration-to-connect-to-github)
++ [Basic workflow.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#basic-workflow-actions)
+    * [Summary.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#summary-to-move-things-from-one-side-to-another)
+    * [Tricks.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#tricks-to-keep-in-mind)
++ [Homework.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#homework-first-project-after-installing-and-configuring-git)
+    * ['Doing'.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#first-steps-doing)
+    * ['Undoing'.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#going-further-undoing)
+    * ['Uploading'.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#available-everywhere-uploading)
+    * ['Renewing'.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#usual-workflow-renewing)
+    * ['Branching'.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#contributing-to-someone-else-project-branching)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ### Basic ideas (specific language).
 
@@ -58,6 +57,7 @@ Note II: recipe forks allow multiple people working in the same project in paral
 Installation:
 
 CentOs7 (in the terminal): `sudo yum install git`.
+
 Windows: download (https://git-scm.com/downloads) and execute it.
 
 Now, you are ready to use *git* commands! 
@@ -81,11 +81,16 @@ Instructions:
 4. `ssh-keygen -t rsa -C "your_email_address@crg.eu"`
 5. `cat id_rsa.pub`
 
-Copy the obtained code (it allow to connect to *github* from this specific PC). 
+Copy the obtained code (it allow to connect to *github* from this specific PC).
+ 
 Log in *github.com* with your previous credentials (https://github.com/login).
+
 Go to the SSH keys section of your settings (https://github.com/settings/keys).
+
 Add the copied code as *"New SSH key"* (please, use a descriptive title).
+
 Launch `ssh -T git@github.com` in the terminal to check you can connect to it.
+
 Done!
 
 
@@ -180,13 +185,21 @@ Execute them and try to understand every single command and supplied argument.
 18. **`git commit -a -m "Continuation" -m "This is the second commit."`**
 
 After step 04, the folder will always be under *Git* control (do it just once!).
+
 After step 07, you had two files on your kitchen bench (see steps 08 and 09).
+
 After step 10, these two files were waiting inside the recipes drawer (staging).
+
 After step 12, you modified one of the files (see step 13).
+
 After step 14, you saved the modification being present in the drawer/stage.
+
 After step 15, everything was saved (and traceable!) in your local recipes book.
+
 - this task should be done when a specific objective was reached to trace it -
+
 After step 18, a new change was added to the book without being in the drawer.
+
 - the *commit -a* option allows simultaneous stage and local book savings - 
 
 ##### Going further ('undoing'):
@@ -206,7 +219,9 @@ After step 18, a new change was added to the book without being in the drawer.
 31. **`git log --oneline --graph --decorate --color`**
 
 After step 21, changes in the bench (not added to stage/drawer) were discarded.
+
 After step 26, changes were eliminated from the stage/drawer but bench kept.
+
 After step 28, changes were also eliminated from the bench.
 
 ##### Available everywhere ('uploading'):
@@ -216,12 +231,19 @@ After step 28, changes were also eliminated from the bench.
 34. **`git push -u origin master`**
 
 After step 32, this local respository is linked with the new one on *Github*.
+
 - you need to create the repository in the website too: https://github.com/new -
+
 - please, create it but without adding any file (we will use the command line) -
+
 After step 34, files/changes were send to the worldwide accessible repository.
+
 - if you do not create the repository in the website, the *push* won't work -
+
 - the *-u* option is necesary only the first time, but not for next updates -
+
 - see your repository worlwide by visiting https://github.com/your_user/hello -
+
 - you are also encouraged to makes changes on the website (e.g.: add a line) -
 
 ##### Usual workflow ('renewing'):
@@ -233,8 +255,11 @@ After step 34, files/changes were send to the worldwide accessible repository.
 39. **`git push -u origin master`**
 
 After step 35, *Github* changes were also downloaded to your local repository.
+
 - launching this command is very recommended before starting any work -
+
 After step 38, changes were saved in the recipes drawer (stage) and local book.
+
 After step 39, the modifications were also saved remotely (github repository). 
 
 ##### Contributing to someone else project ('branching'):
