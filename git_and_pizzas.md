@@ -47,7 +47,7 @@ Note II: recipe forks allow multiple people working in the same project in paral
 ### What do you need in your Git/Github kitchen? 
 
 A currently activated **Github** account: https://github.com/join .  
-The **Git** software installed in your PC. .
+The **Git** software installed in your PC.
 
 Installation:
 
@@ -56,7 +56,7 @@ Installation:
 
 Now, you are ready to use *git* commands! 
 
-##### Minimal configuration for *Git* (after installation):
+##### Minimal *Git* configuration:
 (use the terminal in Linux and the *Git Bash* software in Windows)
 
 Launch `git config --global user.name "Your name here"` command.  
@@ -64,7 +64,7 @@ Then, launch `git config --global user.email "your_email@here.com"`.
 
 Your configuration can be checked with `git config --global --list`.
 
-##### Minimal configuration to connect to *Github*:
+##### Minimal *Github* configuration:
 
 Instructions:
 
@@ -139,7 +139,7 @@ The file *.gitignore* allows to specify always omitted files (e.g.: *\*.log*).
 A `git checkout -- file_name` eliminates bench changes (use very carefully!).
 
 
-### Homework (first project after installing and configuring *Git*).
+### Homework (your first project).
 
 List of commands initializing your first project to start playing with *Git*.  
 Execute them and try to understand every single command and supplied argument.
@@ -225,7 +225,8 @@ After step 34, files/changes were send to the worldwide accessible repository.
 39. **`git push -u origin master`**
 
 After step 35, *Github* changes were also downloaded to your local repository.  
-\- launching this command is very recommended before starting any work -  
+\- launching this command is very recommended before starting any work -
+
 After step 38, changes were saved in the recipes drawer (stage) and local book.  
 After step 39, the modifications were also saved remotely (github repository). 
 
