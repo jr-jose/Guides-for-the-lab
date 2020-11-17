@@ -1,7 +1,7 @@
 # Another *Git* and *Github* pizzas guide.
 
 Using Git and Github is like making and delivering pizzas. Are you hungry?!??  
-(well, it's not like delivering pizzas but their recipes. Let's explain it ...)
+Well, it's not like delivering pizzas but their recipes. Let's explain it ...
 
 
 ### Table of contents.
@@ -13,6 +13,8 @@ Using Git and Github is like making and delivering pizzas. Are you hungry?!??
 + [Basic workflow.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#basic-workflow-actions)
     * [Summary.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#summary-to-move-things-from-one-side-to-another)
     * [Tricks.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#tricks-to-keep-in-mind)
+ 
+ 
 + [Homework.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#homework-first-project-after-installing-and-configuring-git)
     * ['Doing'.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#first-steps-doing)
     * ['Undoing'.](https://github.com/jr-jose/Guides-for-the-lab/blob/master/git_and_pizzas.md#going-further-undoing)
@@ -54,15 +56,17 @@ Installation:
 * CentOs7 (in the terminal): `sudo yum install git`.
 * Windows: download (https://git-scm.com/downloads) and execute it.
 
-Now, you are ready to use *git* commands! 
-
-##### Minimal *Git* configuration:
+Now, you are ready to use *git* commands!  
 (use the terminal in Linux and the *Git Bash* software in Windows)
 
-Launch `git config --global user.name "Your name here"` command.  
-Then, launch `git config --global user.email "your_email@here.com"`.
+##### Minimal *Git* configuration:
 
-Your configuration can be checked with `git config --global --list`.
+Launch next commands:  
+`git config --global user.name "Your name here"`  
+`git config --global user.email "your_email@here.com"`
+
+Your current configuration can be checked with:  
+`git config --global --list`.
 
 ##### Minimal *Github* configuration:
 
@@ -111,19 +115,19 @@ Available commands:
 |               |                 |                    |                      |
 | git init      |                 |                    |                      |
 | git status    |                 |                    |                      |
-| git add ..... | .......>        |                    |                      |
-| git commit -a | ............... | ........>          |                      |
-|               | git commit .... | ........>          |                      |
-|       <...... | git reset *file*|                    |                      |
-|       <...... | ............... | git reset *commit* |                      |
-|       <...... | ............... | .................. | .......... git clone |
-|       <...... | ............... | .................. | ........... git pull |
-|               |                 | git push ......... | .........>           |
-|               |                 |          <........ | .......... git fetch |
-|       <.. git | diff ..>        |                    |                      |
-|       <.. git | .... diff ..... | HEAD ...>          |                      |
+| git add ----- | ------->        |                    |                      |
+| git commit -a | --------------- | -------->          |                      |
+|               | git commit ---- | -------->          |                      |
+|       <------ | git reset *file*|                    |                      |
+|       <------ | --------------- | git reset *commit* |                      |
+|       <------ | --------------- | ------------------ | ---------- git clone |
+|       <------ | --------------- | ------------------ | ----------- git pull |
+|               |                 | git push --------- | --------->           |
+|               |                 |          <-------- | ---------- git fetch |
+|       <-- git | diff -->        |                    |                      |
+|       <-- git | ---- diff ----- | HEAD --->          |                      |
 |               |                 |       git log      |                      |
-| ------------- | --------------- | ------------------ | -------------------- |
+|               |                 |                    |                      |
 
 ##### Tricks (to keep in mind):
 
@@ -206,14 +210,14 @@ After step 28, changes were also eliminated from the bench.
 33. **`git remote -v`**
 34. **`git push -u origin master`**
 
-After step 32, this local respository is linked with the new one on *Github*.  
+After step 32, this local repository is linked with the new one on *Github*.  
 \- you need to create the repository in the website too: https://github.com/new -  
 \- please, create it but without adding any file (we will use the command line) -
 
 After step 34, files/changes were send to the worldwide accessible repository.  
 \- if you do not create the repository in the website, the *push* won't work -  
-\- the *-u* option is necesary only the first time, but not for next updates -  
-\- see your repository worlwide by visiting https://github.com/your_user/hello -  
+\- the *-u* option is necessary only the first time, but not for next updates -  
+\- see your repository worldwide by visiting https://github.com/your_user/hello -  
 \- you are also encouraged to makes changes on the website (e.g.: add a line) -
 
 ##### Usual workflow ('renewing'):
@@ -233,15 +237,15 @@ After step 39, the modifications were also saved remotely (github repository).
 ##### Contributing to someone else project ('branching'):
 
 40. `cd ..`
-41. **`git clone https://github.com/jr-jose/another_git_guide.git`**
-42. `cd another_git_guide`
-43. **`git branch another_git_guide_v_your_user`**
-44. **`git checkout another_git_guide_v_your_user`**
+41. **`git clone https://github.com/jr-jose/Guides-for-the-lab.git`**
+42. `cd Guides-for-the-lab`
+43. **`git branch Guides-for-the-lab-your_user`**
+44. **`git checkout Guides-for-the-lab-your_user`**
 45. `echo "Line that I'm adding to the project." >> git_and_pizzas.md`
 46. **`git add git_and_pizzas.md`**
 47. **`git status`**
 48. **`git commit -m "modification XXX" -m "I just added a line for testing"`**
-49. **`git push -u origin another_git_guide_v_your_user`**
+49. **`git push -u origin Guides-for-the-lab-your_user`**
 
 After step 40, it's now you who should know and explore what to do ... :)
 
