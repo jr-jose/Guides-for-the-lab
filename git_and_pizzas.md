@@ -66,7 +66,7 @@ Launch next commands:
 `git config --global user.email "your_email@here.com"`
 
 Your current configuration can be checked with:  
-`git config --global --list`.
+`git config --global --list`
 
 ##### Minimal *Github* configuration:
 
