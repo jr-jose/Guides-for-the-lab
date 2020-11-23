@@ -235,7 +235,7 @@ After step 38, changes were saved in the recipes drawer (stage) and local book.
 After step 39, the modifications were also saved remotely (github repository). 
 
 ##### Contributing to someone else project ('branching'): 
-(something that may not be necessary to test now)
+-something that may not be necessary to test now-
 
 40. `cd ..`
 41. **`git clone https://github.com/jr-jose/Guides-for-the-lab.git`**
