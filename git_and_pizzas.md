@@ -160,7 +160,7 @@ Note IV: and, finally, remember that ***git status*** is a very good friend too!
 03. `cd hello`
 04. **`git init`**
 05. **`git status`**
-06. `echo "hello world!" > hello.txt`
+06. `echo "hello world" > hello.txt`
 07. `echo "This repository is a simple test." > readme.md`
 08. `dir`
 09. **`git status`**
