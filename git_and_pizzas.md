@@ -226,7 +226,7 @@ After step 34, files/changes were send to the worldwide accessible repository.
 36. `echo "New modifications that I'm doing locally." >> readme.md`
 37. **`git status`**
 38. **`git commit -a -m "Last line" -m "This commit modifies the last line."`**
-39. **`git push -u origin master`**
+39. **`git push origin master`**
 
 After step 35, *Github* changes were also downloaded to your local repository.  
 \- launching this command is very recommended before starting any work -
