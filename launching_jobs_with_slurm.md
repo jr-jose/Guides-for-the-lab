@@ -1,11 +1,11 @@
 # How to launch jobs in CNAG server.
 
 
-The CNAG server uses **SLURM** as the workload manager.
+The CNAG server uses *SLURM* as the workload manager.
 
 
-Everything you could need is available in the **SLURM* documentation 
-(visit the **users** sections at any time!):
+Everything you could need is available in the *SLURM* documentation 
+(visit the *users* sections at any time!):
 https://slurm.schedmd.com/documentation.html .
 
 
@@ -25,12 +25,12 @@ Next lines are a quick summary of the basic possibilities it offers to you.
 ### Launching jobs.
 
 
-Jobs are launched using **SBATCH** scripts.  These scripts are always divided in
-two parts: first one with **SBATCH** directives, second one with the commands 
+Jobs are launched using *SBATCH* scripts.  These scripts are always divided in
+two parts: first one with *SBATCH* directives, second one with the commands 
 you want to launch.
 
 
-Here you have a small template to be used as **SBATCH** script
+Here you have a small template to be used as *SBATCH* script
 (copy, paste, read everything and modify present options to launch your jobs):
 
 
@@ -71,11 +71,11 @@ exit 0                                  ## (it throws 0 when arrives to the end)
 ```
 
 
-As you can see, **SBATCH** directives are preceded by a hashtag ('#').
+As you can see, *SBATCH* directives are preceded by a hashtag ('#').
 Two hashtags ('##') are used to comment any directive or command.
 
 
-First line of your **SBATCH** should indicate the location of your **bash**.
+First line of your *SBATCH* should indicate the location of your *bash*.
 Check your specific address launching 'which bash' in the command line.
 
 
@@ -83,8 +83,8 @@ If you ask more resources time, memory or cpu's), you will wait more time in the
 queue (till there are free resources and after jobs ask less resources). 
 
 
-To launch your **SBATCH** script (I always add a '.sh' suffix to the name of the
-**SBATCH** script file), do it using the `sbatch script_file_name.sh` command
+To launch your *SBATCH* script (I always add a '.sh' suffix to the name of the
+*SBATCH* script file), do it using the `sbatch script_file_name.sh` command
 (change the permissions of your script, with 'chmod', to be able to launch it).
 
 
@@ -99,16 +99,17 @@ To launch your **SBATCH** script (I always add a '.sh' suffix to the name of the
 * `sacct` (or `sacct --long`) to get info. about running or finished jobs too.
 * `sacct -o jobid,maxrss` to check the maximum of memory required for a job.
 * `sinfo` to get info about nodes and partitions.
-* `mnsh` to open a **shell** for 8 hours to make interactive tests; with **X**!
+* `mnsh` to open a *shell* for 8 hours to make interactive tests; with *X*!
 
 
-* Use the **command --help** or **man command** to know more about them.
+* Use the *command --help* or *man command* to know more about them.
 
 
 ### Complicated script examples.
 
 
 Don't use these templates if you don't understand each line/aspect.
+Please, use the available template in the [*launching jobs* section](https://github.com/jr-jose/Guides-for-the-lab/blob/master/launching_jobs_with_slurm.md#launching-jobs).
 
 
 ##### General scripts:
