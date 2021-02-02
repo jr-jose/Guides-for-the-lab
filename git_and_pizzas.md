@@ -160,7 +160,7 @@ Note IV: and, finally, remember that ***git status*** is a very good friend too!
 03. `cd hello`
 04. **`git init`**
 05. **`git status`**
-06. `echo "hello world!" > hello.txt`
+06. `echo "hello world" > hello.txt`
 07. `echo "This repository is a simple test." > readme.md`
 08. `dir`
 09. **`git status`**
@@ -226,7 +226,7 @@ After step 34, files/changes were send to the worldwide accessible repository.
 36. `echo "New modifications that I'm doing locally." >> readme.md`
 37. **`git status`**
 38. **`git commit -a -m "Last line" -m "This commit modifies the last line."`**
-39. **`git push -u origin master`**
+39. **`git push origin master`**
 
 After step 35, *Github* changes were also downloaded to your local repository.  
 \- launching this command is very recommended before starting any work -
@@ -234,7 +234,8 @@ After step 35, *Github* changes were also downloaded to your local repository.
 After step 38, changes were saved in the recipes drawer (stage) and local book.  
 After step 39, the modifications were also saved remotely (github repository). 
 
-##### Contributing to someone else project ('branching'):
+##### Contributing to someone else project ('branching'): 
+-something that may not be necessary to test now-
 
 40. `cd ..`
 41. **`git clone https://github.com/jr-jose/Guides-for-the-lab.git`**
