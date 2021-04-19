@@ -1,15 +1,12 @@
 # How to launch jobs in CNAG server.
 
 
-The CNAG server uses *SLURM* as the workload manager.
-
-
-Everything you could need is available in the *SLURM* documentation 
-(visit the *users* sections at any time!):
+The CNAG server uses *SLURM* as the workload manager. Next lines are a quick 
+summary of the basic possibilities it offers. Everything else is available in
+the *SLURM* documentation (visit the *users* sections at any time!):
 https://slurm.schedmd.com/documentation.html .
 
 
-Next lines are a quick summary of the basic possibilities it offers to you.
 
 
 ### Table of contents.
@@ -26,36 +23,37 @@ Next lines are a quick summary of the basic possibilities it offers to you.
 
 
 Jobs are launched using *SBATCH* scripts.  These scripts are always divided in
-two parts: first one with *SBATCH* directives, second one with the commands 
-you want to launch.
+two parts: the first one has the *SBATCH* directives, the second one has the
+commands to be launched.
 
 
-Here you have a small template to be used as *SBATCH* script
-(copy, paste, read everything and modify present options to launch your jobs):
+Here you have a simple *SBATCH* script template to be used. Copy, paste and 
+modify these options to launch jobs.
 
 
 ```
-#!/bin/bash                             ## (please, check it with 'which bash')
+#!/bin/bash
 
 ##############################
 ##   'sbatch' directives    ##
 ##############################
 
 #SBATCH --job-name=test                 ## (name for your job)
-#SBATCH --time='07:59:59'               ## (time you are reserving in hours)
-# #SBATCH --dependency=afterok:job_id   ## (stopping till finishing another job)
+#SBATCH --qos=lowprio                   ## (used queue: lowprio/normal/highprio)
+#SBATCH --time='167:59:58'              ## (time you are reserving in hours)
+##SBATCH --dependency=afterok:job_id    ## (stopping till finishing another job)
 #SBATCH --ntasks=1                      ## (number of processes when MPI)
 #SBATCH --cpus-per-task=1               ## (cpu's used when multithreading)
-#SBATCH --mem-per-cpu=4GB               ## (reserved memory for each threading)
-# #SBATCH --mem=4GB                     ## (reserved memory for each node)
-#SBATCH -D=/scratch/beekman/user_name   ## (folder to launch your job in)
-#SBATCH --output=$SCRATCH/outputs/job_%j.out ## (outputs and errors file name)
+##SBATCH --mem-per-cpu=4GB              ## (reserved memory for each threading)
+##SBATCH --mem=52GB                     ## (reserved memory for each node)
+##SBATCH -D=/scratch/beekman/user_name  ## (folder to launch your job in)
+##SBATCH --output=/scratch/beekman/user_name/outputs/job_%j.out
 
 ##############################
 ##    needed environment    ##
 ##############################
 
-module load gsl/2.4 R/4.0.1             ## (load the modules you could need)
+module load PYTHON/2.7.6 MACS2/20160309 gsl/2.4 R/4.0.1    ## (modules you need)
 
 ##############################
 ##    commands execution    ##
@@ -71,38 +69,46 @@ exit 0                                  ## (it throws 0 when arrives to the end)
 ```
 
 
-As you can see, *SBATCH* directives are preceded by a hashtag ('#').
-Two hashtags ('##') are used to comment any directive or command.
+First line of the *SBATCH* script indicates the location of the *bash* command.
+Check the specific location in your computer launching 'which bash'.
 
 
-First line of your *SBATCH* should indicate the location of your *bash*.
-Check your specific address launching 'which bash' in the command line.
+As shown in the example, *SBATCH* directives are preceded by hash symbols ('#').
+Two hash symbols ('##') are used to deactivate/comment any directive or command.
 
 
-If you ask more resources time, memory or cpu's), you will wait more time in the
-queue (till there are free resources and after jobs ask less resources). 
+The command to be executed should be preceded by `Rscript` or `srun`, depending
+if it is a *R* script or just a command line to be launched in the terminal.
 
 
-To launch your *SBATCH* script (I always add a '.sh' suffix to the name of the
-*SBATCH* script file), do it using the `sbatch script_file_name.sh` command
-(change the permissions of your script, with 'chmod', to be able to launch it).
+To launch your *SBATCH* script, do it using the `sbatch script_file_name.sh` 
+command (adding the 'sh' suffix to your *SBATCH* script name is always a good
+practice). Change the permissions of your script (with 'chmod') when needed.
 
+
+Note: if you ask more resources (e.g.: time, memory or cpu's), you will wait
+more time in the queue.
 
 ### Controlling jobs:
 
 
-* `squeue -u your_user_name' to see launched jobs.
+* `squeue -u your_user_name` to see launched jobs.
 * `scancel job_id` to cancel launched jobs.
 * `scontrol hold job_id` to place a job waiting/held.
 * `scontrol release job_id` to release held jobs.
 * `scontrol show job -dd job_id` to get detailed information about a job.
 * `sacct` (or `sacct --long`) to get info. about running or finished jobs too.
-* `sacct -o jobid,maxrss` to check the maximum of memory required for a job.
+* `sacct -o jobid,maxrss -j job_id` to check the maximum of required memory.
 * `sinfo` to get info about nodes and partitions.
 * `mnsh` to open a *shell* for 8 hours to make interactive tests; with *X*!
 
 
 * Use the *command --help* or *man command* to know more about them.
+
+
+Note: another way to start an interactive session (over-passing the *mnsh*
+limitations) is to directly use *srun* with the *'--pty bash'* argument. E.g.: 
+`srun --job-name "InteracJob" --cpus-per-task 1 --time 23:59:00 --pty bash`.
 
 
 ### Complicated script examples.
@@ -128,6 +134,7 @@ Please, use the available template in the [*launching jobs* section](https://git
 ##############################
 
 #SBATCH --job-name=test                 ## (nombre de proyeco -su directorio-)
+#SBATCH --qos=lowprio                   ## (used queue: lowprio/normal/highprio)
 #SBATCH --time='00:00:59'               ## (¡obligado!; formato 'DD-HH:MM:SS')
 # #SBATCH --begin='2020-06-01'          ## (formato 'YYYY-MM-DD[THH:MM[:SS]]')
 # #SBATCH --dependency=afterok:job_id   ## ('afterok/afternotok/afterany')
@@ -270,6 +277,7 @@ exit 0
 ##############################
 
 #SBATCH --job-name=no_name              ## (nombre de proyeco -su directorio-)
+#SBATCH --qos=lowprio                   ## (used queue: lowprio/normal/highprio)
 #SBATCH --time='07:59:59'               ## (¡obligado!; formato 'DD-HH:MM:SS')
 # #SBATCH --begin='2020-06-01'          ## (formato 'YYYY-MM-DD[THH:MM[:SS]]')
 # #SBATCH --dependency=afterok:job_id   ## ('afterok/afternotok/afterany')

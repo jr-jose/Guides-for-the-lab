@@ -36,14 +36,17 @@ Git allows an easy way to trace these forks ... and to join branches later on.
 
 Your recipe versions are then easily traceable, and available from everywhere!  
 Git is the versions control system most used worldwide, and it's for free.
+Github es the website allowing accessibility to *Git* files from everywhere.
 
 Note I: a versions control system is a program allowing you to control 
 developmental code/recipes changes, who changed it, when was do it, etc., 
-making script versions always available from everywhere (and avoiding multiple
-copies/versions of the same recipe in different computers). You will always know
-which pizza version was cooked at every moment and from where it came! 
+making script versions potentially available from everywhere (and avoiding 
+multiple copies/versions of the same recipe in different computers). You will
+always know which pizza version was cooked at every moment and from where it 
+came! 
 
-Note II: recipe forks allow multiple people working in the same project in parallel, merging all back to the *master* branch after the work is done.
+Note II: recipe forks allow multiple people working in the same project in 
+parallel, merging all back to the *master* branch after the work is done.
 
 
 ### What do you need in your Git/Github kitchen? 
@@ -92,16 +95,23 @@ Every project should be a differentiated folder/directory (it's mandatory!).
 
 1. Create the working/project directory with `init` (just once, not every time).
 2. Save recipe changes with `add` (when you want, but try to do it often!).
-3. Added changes are traced by using `commit` command (try to explain them!).
+3. Trace these added changes by using `commit` command (explain the changes!).
   
 4. Share traceable recipes with `push` (recipe available everywhere via Github).
 5. Download the available recipe version with `pull` (obtained from Github).
   
 6. If you need *help* for a command, please use it (e.g.: `git help pull`).
 
+With these commands, you are moving your recipe/code through 4 different 
+developmental stages. The *ground* level is your workspace; the "summit" is the
+public (accessible everywhere) book of recipes (aka *public repository*). There 
+are two intermediate stages: the one to save all changes but not properly (a
+disorganized recipes drawer) and a book of recipes, with everything perfectly
+organized but still not available worldwide (your local repository).
+
 ##### Summary (to *move* things from one side to another):
 
-There are three steps to arrive to the *summit*:
+Then, there are three steps to arrive to the *summit*:
 
 * From the *bench* to the disorganized *drawer* with recipes notes (to save it).
 * From this *drawer* to your personal organized/traceable *recipes book*.
@@ -134,7 +144,8 @@ Available commands:
 Use `git init` to work with current folder (you need to be inside the folder).  
 Use `git init new_project_name` to create a new folder to work with.  
 Use `git add file_name` to add a whole file to the project.  
-Use `git add .` to add all files (and potential changes) recursively.  
+Use `git add .` to add all files (and potential changes) recursively.
+
 Describe changes with a double `git commit -m "update name" -m "description"`.  
 Save directly in local collections with `git commit -a` (no *git add* needed).  
 Then, the `git log` command shows all traced changes in your local collection.
@@ -145,8 +156,8 @@ A `git checkout -- file_name` eliminates bench changes (use very carefully!).
 
 ### Homework (your first project).
 
-List of commands initializing your first project to start playing with *Git*.  
-Execute them and try to understand every single command and supplied argument.
+This is a list of commands initializing your first project to start playing.  
+Execute them understanding every single command and the supplied arguments too.
 
 Note I: git commands are written in bold characters.
 Note II: use `cat file_name` command to see inside files (at any moment).
