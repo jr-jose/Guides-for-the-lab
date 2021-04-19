@@ -35,18 +35,15 @@ Recipes can fork in a main branch (***master***) and secondary ones.
 Git allows an easy way to trace these forks ... and to join branches later on.
 
 Your recipe versions are then easily traceable, and available from everywhere!  
-Git is the versions control system most used worldwide, and it's for free.
-Github es the website allowing accessibility to *Git* files from everywhere.
+Git is the version control system most used worldwide, and it's for free. 
+Github is the website allowing accessibility to *Git* files from everywhere.
 
-Note I: a versions control system is a program allowing you to control 
-developmental code/recipes changes, who changed it, when was do it, etc., 
-making script versions potentially available from everywhere (and avoiding 
-multiple copies/versions of the same recipe in different computers). You will
-always know which pizza version was cooked at every moment and from where it 
-came! 
 
-Note II: recipe forks allow multiple people working in the same project in 
-parallel, merging all back to the *master* branch after the work is done.
+Note I: a version control system is a program allowing to control code changes.
+
+Note II: forking recipes allows to work different people in the same project.
+
+Note III: merging back all parallel changes into the *master* branch is easy.
 
 
 ### What do you need in your Git/Github kitchen? 
@@ -102,21 +99,23 @@ Every project should be a differentiated folder/directory (it's mandatory!).
   
 6. If you need *help* for a command, please use it (e.g.: `git help pull`).
 
-With these commands, you are moving your recipe/code through 4 different 
-developmental stages. The *ground* level is your workspace; the "summit" is the
-public (accessible everywhere) book of recipes (aka *public repository*). There 
-are two intermediate stages: the one to save all changes but not properly (a
-disorganized recipes drawer) and a book of recipes, with everything perfectly
-organized but still not available worldwide (your local repository).
 
 ##### Summary (to *move* things from one side to another):
 
-Then, there are three steps to arrive to the *summit*:
+
+With previous commands, you move your recipe/code through 4 different stages: 
+ 
+* The *ground* level is your **workspace**.
+* The disorganized drawer to save (undocumented) changes is the **staging**.
+* The recipes book, documented but unavailable worldwide is the **local repo.**.
+* The *summit* is the accessible everywhere recipes book, the **public repo.**.
+
+Then, there are three steps (three actions) to arrive to the *summit*:
 
 * From the *bench* to the disorganized *drawer* with recipes notes (to save it).
-* From this *drawer* to your personal organized/traceable *recipes book*.
-* From *your recipes book* to the *worldwide accessible (*wwa*) recipes book*.
-
+* From this *drawer* to your personal traceable *recipes book* (to document it).
+* From *your recipes book* to the *worldwide accessible one* (to access it).
+ 
 Available commands:
 
 | Kitchen bench | Recipes drawer  | Your recipes book  | *wwa* recipes book   |
@@ -159,10 +158,11 @@ A `git checkout -- file_name` eliminates bench changes (use very carefully!).
 This is a list of commands initializing your first project to start playing.  
 Execute them understanding every single command and the supplied arguments too.
 
-Note I: git commands are written in bold characters.
-Note II: use `cat file_name` command to see inside files (at any moment).
-Note III: use *git help git_command* to get specific help from a *git* command.
+Note I: git commands are written in bold characters. 
+Note II: use `cat file_name` command to see inside files (at any moment). 
+Note III: use *git help git_command* to get specific help from a *git* command. 
 Note IV: and, finally, remember that ***git status*** is a very good friend too!
+
 
 ##### First steps ('doing'):
 
