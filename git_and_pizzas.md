@@ -256,7 +256,7 @@ After step 39, the modifications were also saved remotely (github repository).
 45. `echo "Line that I'm adding to the project." >> git_and_pizzas.md`
 46. **`git add git_and_pizzas.md`**
 47. **`git status`**
-48. **`git commit -a -m "modification XXX" -m "I just added a line for testing"`**
+48. **`git commit -m "modification XXX" -m "I just added a line for testing"`**
 49. **`git push -u origin Guides-for-the-lab-your_user`**
 
 ##### Continue working after he/she accepts your branch modifications:
@@ -266,6 +266,7 @@ After step 39, the modifications were also saved remotely (github repository).
 52. **`git pull`**
 53. **`git checkout Guides-for-the-lab-your_user`**
 54. `...`
+
 
 After step 40, it's now you who should know and explore what to do ... :)
 
