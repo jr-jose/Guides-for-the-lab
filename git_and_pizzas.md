@@ -265,7 +265,9 @@ After step 39, the modifications were also saved remotely (github repository).
 51. **`git checkout main`**
 52. **`git pull`**
 53. **`git checkout Guides-for-the-lab-your_user`**
-54. `...`
+54. **`git merge main`**
+55. **`git push`**
+56. `...`
 
 
 After step 40, it's now you who should know and explore what to do ... :)
